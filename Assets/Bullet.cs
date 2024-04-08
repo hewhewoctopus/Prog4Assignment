@@ -6,10 +6,12 @@ public class Bullet : MonoBehaviour
 {
     public float destroyAfterSeconds = 3f;
     public float destroyTimer;
+    public RandomSpawner randomSpawner { get; private set; }
 
     private void Start()
     {
         destroyTimer = 0f;
+        randomSpawner = FindObjectOfType<RandomSpawner>();
     }
 
     private void Update()
@@ -29,6 +31,7 @@ public class Bullet : MonoBehaviour
         {
             //Destroy the enemy 
             Destroy(collision.gameObject);
+            randomSpawner.EnemySpawn();
         }
 
         // Object the bullet on collision with any object
