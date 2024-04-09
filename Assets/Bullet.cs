@@ -16,13 +16,13 @@ public class Bullet : MonoBehaviour
 
     private void Update()
     {
-        destroyTimer += Time.deltaTime;
+        //destroyTimer += Time.deltaTime;
 
-        //Check if the bullet should be destroyed based on time 
-        if(destroyTimer >= destroyAfterSeconds)
-        {
-            Destroy(gameObject);
-        }
+        ////Check if the bullet should be destroyed based on time 
+        //if(destroyTimer >= destroyAfterSeconds)
+        //{
+        //    //Destroy(gameObject);
+        //}
     }
 
     private void OnCollisionEnter(Collision collision)
